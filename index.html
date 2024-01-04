@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <!--^ Fotnawsam Kit -->
+    <script src="https://kit.fontawesome.com/9a67b7fa89.js" crossorigin="anonymous"></script>
     <title>University Website</title>
 </head>
 
@@ -13,7 +15,9 @@
     <section class="header">
         <nav>
             <a href="index.html"><img src="Images/logo.jpg" alt="logo"></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+
                 <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
@@ -22,20 +26,33 @@
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
-
-
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <div class="text-box">
             <h1>World's Biggest University</h1>
             <p>Global education without limits! Join the World's Biggest University. Explore, learn,<br> and excel on a
                 journey of boundless knowledge. Enroll now!</p>
-                <a href="" class="hero-btn">Visit Us To Know More</a>
+            <a href="" class="hero-btn">Visit Us To Know More</a>
         </div>
 
 
     </section>
 
+
+
+    <!--^ Javascript for Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById('navLinks')
+
+        function showMenu() {
+            navLinks.style.right = '0'
+        }
+        function hideMenu() {
+            navLinks.style.right = '-200px'
+        }
+
+    </script>
 
 </body>
 
